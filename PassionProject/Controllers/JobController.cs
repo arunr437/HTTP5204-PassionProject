@@ -32,6 +32,8 @@ namespace PassionProject.Controllers
 
             //Query to get the list of jobs from the JobPosts table
             string query = "select * from JobPosts ";
+            
+            //Code to implement Search Box feature
             if(searchKey!=null)
             {
                 query = query + "where name like '%" + searchKey + "%'";
