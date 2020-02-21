@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "AddSeekers";
+}
+
+<h2>AddSeekers</h2>
+@*Form to add new seeker into the Job table*@
+<form method="post" href="/Job/AddSeekers">
+    <div class="form-group">
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Seeker Name:</label>
+            <input class="form-control" id="name" name="name" type="text" />
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Email ID:</label>
+            <input class="form-control" id="emailId" name="emailId" type="text" />
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Location:</label>
+            <input class="form-control" id="location" name="location" type="text" />
+        </div>
+    </div>
+    <!-- Link styled as a button to go back to the list page-->
+    <a class="btn btn-default" href="/Seeker/ListSeekers">Back</a>
+    <!-- Button to submit the form-->
+    <input type="submit" class="btn btn-primary" value="Add Seeker">
+</form>

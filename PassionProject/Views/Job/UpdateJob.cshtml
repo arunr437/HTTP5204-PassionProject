@@ -1,0 +1,35 @@
+﻿@model PassionProject.Models.JobPost
+@{
+    ViewBag.Title = "UpdateJob";
+}
+
+@*Below code is used to display information about the job details. These can be updated and submitted by the user*@
+<h2>UpdateJob</h2>
+<form method="post" href="/Job/AddJobs">
+    <div class="form-group">
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Job Name:</label>
+            <input class="form-control" id="name" value="@Model.name" name="name" type="text" />
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Company:</label>
+            <input class="form-control" id="company" value="@Model.company" name="company" type="text" />
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Skill:</label>
+            <input class="form-control" id="skill" value="@Model.skill" name="skill" type="text" />
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Description:</label>
+            <input class="form-control" id="description" value="@Model.description"name="description" type="text" />
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Location:</label>
+            <input class="form-control" id="location" value="@Model.location" name="location" type="text" />
+        </div>
+    </div>
+    <!-- Link styled as a button to go back to the list page-->
+    <a class="btn btn-default" href="/Job/ListJobs">Back</a>
+    <!-- Button to submit the form-->
+    <input type="submit" class="btn btn-primary" value="Update">
+</form>

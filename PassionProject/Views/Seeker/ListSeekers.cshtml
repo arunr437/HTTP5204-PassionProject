@@ -1,0 +1,52 @@
+﻿@model List<PassionProject.Models.JobSeeker>
+@{
+    ViewBag.Title = "ListSeekers";
+}
+
+    <div class="container well mt">
+
+        @*Below code will create a search box with a button which will be used to search for Page Title*@
+        <form action="/Seeker/ListSeekers" method="get">
+            <input type="text" id="searchKey" name="searchKey" />
+            <button class="btn btn-primary">
+                <span class="glyphicon glyphicon-search"></span> Search
+            </button>
+        </form>
+
+
+        @*Below code will display the list of seekers and have buttons for each record that can be used to Update and Delete*@
+        <div class="h2">Manage Seekers</div>
+        <table class="table table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email ID</th>
+                    <th>Location</th>
+                    <th colspan="2">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    foreach (var seeker in Model)
+                    {
+                        <tr>
+                            <td><a href="/Seeker/ShowSeeker/@seeker.SeekerId">@seeker.name</a></td>
+                            <td>@seeker.emailId</td>
+                            <td>@seeker.location</td>
+                            <td>
+                                <a href="/Seeker/UpdateSeeker/@seeker.SeekerId" class="btn btn-warning">Update</a>
+                                <a href="/Seeker/DeleteSeeker/@seeker.SeekerId" onclick="return validate();" class="btn btn-danger">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+
+        @*Link to create a new Seekers. Link will appear like a button due to bootstrap styling*@
+        <div>
+            <a class="btn btn-primary" href="/Seeker/AddSeekers/" id="createBtn">Add Job Seeker </a>
+        </div>
+    </div>
+
+

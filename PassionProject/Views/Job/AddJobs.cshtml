@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "AddJobs";
+}
+
+<h2>Add a new Job</h2>
+@*Form to add new job into the Job table*@ 
+<form method="post" href="/Job/AddJobs">
+    <div class="form-group">
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Name:</label>
+            <input class="form-control" id="name" name="name" type="text" />
+        </div>  
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Company:</label>
+            <input class="form-control" id="company" name="company" type="text" />
+        </div>  
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Skill:</label>
+            <input class="form-control" id="skill" name="skill" type="text" />
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Description:</label>
+            <input class="form-control" id="description" name="description" type="text" />
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Location:</label>
+            <input class="form-control" id="location" name="location" type="text" />
+        </div>
+    </div>
+    <!-- Link styled as a button to go back to the list page-->
+    <a class="btn btn-default" href="/Job/ListJobs">Back</a>
+    <!-- Button to submit the form-->
+    <input type="submit" class="btn btn-primary" value="Add Job">
+</form>

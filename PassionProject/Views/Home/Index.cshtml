@@ -1,0 +1,56 @@
+﻿@model string
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<html>
+<head>
+    <title>Index</title>
+    <style type="text/css">
+        .login-form {
+            width: 300px;
+            margin: 50px auto;
+        }
+
+            .login-form form {
+                margin-bottom: 15px;
+                background: #f7f7f7;
+                box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+                padding: 30px;
+            }
+
+            .login-form h2 {
+                margin: 0 0 15px;
+            }
+
+        .form-control, .btn {
+            min-height: 38px;
+            border-radius: 2px;
+        }
+
+        .btn {
+            font-size: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    @*Below code is used to show the login form*@ 
+    <div class="login-form">
+        <form action="/Home/Index" method="post">
+            <h2 class="text-center">Login</h2>
+            <div class="form-group">
+                <input type="text" placeholder="User Name" name="user" class="form-control" required="required">
+            </div>
+            <div class="form-group">
+                <input type="password" placeholder="Password" name="password" required="required" class="form-control">
+            </div>
+            <span style="color:red">@Model</span>
+            <div class="form-group">
+                @*Button to submit the form login form*@ 
+                <button type="submit" class="btn btn-primary btn-block">Log in</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
