@@ -7,7 +7,3 @@ The PetGrooming database has 6 tables – JobSeeker, JobPostsOwners, JobApplicat
 	•	JobPost: The JobPost table has the details about job posts. One job post can have many Job applications. Thus, it has a One-to-Many realtionship with the JobApplication table.
 
 	•	JobApplication: The JobApplication table has the details about the job applications. It acts as a mapping table between the JobSeeker and the JobPost. This table is used to avoid Many-to-Many relationships between them. 
-
-	•	User: The User table has the details about the username and password. It has a One-to-One relationship with JobSeeker and Employer.
-
-	•	Employer: This table has details about the Employer. One employer can have many JobPosts. So, it has a One-to-Many relationship with JobPosts. It 
