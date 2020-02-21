@@ -31,6 +31,8 @@ namespace PassionProject.Controllers
             
             //Query to get the list of Seekers from the Seekers table
             string query = "select * from JobSeekers ";
+            
+            //Code to implement the search box feature
             if (searchKey != "")
             {
                 query = query + "where name like '%" + searchKey + "%'";
